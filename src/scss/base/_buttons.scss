@@ -1,0 +1,54 @@
+@use "../utils/variables";
+@use "../utils/mixins";
+
+// Base Button
+%btn-base {
+  display: inline-block;
+  font-family: variables.$font-body;
+  font-size: 1.6rem;
+  font-weight: variables.$font-weight-medium;
+  padding: 1.4rem 3.2rem;
+  border-radius: variables.$radius-md;
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: variables.$transition-base;
+
+  @include mixins.respond-to("md") {
+    font-size: 1.8rem;
+  }
+}
+
+// Primary Button
+.primary-btn {
+  @extend %btn-base;
+  background-color: variables.$color-accent-coral;
+  color: variables.$color-white;
+  border-color: variables.$color-accent-coral;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background-color: darken(variables.$color-accent-coral, 10%);
+    border-color: darken(variables.$color-accent-coral, 10%);
+    color: variables.$color-white;
+    text-decoration: none;
+  }
+}
+
+// Secondary Button
+.secondary-btn {
+  @extend %btn-base;
+  background-color: transparent;
+  color: variables.$color-primary-navy;
+  border-color: variables.$color-primary-navy;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background-color: variables.$color-primary-navy;
+    color: variables.$color-white;
+    text-decoration: none;
+  }
+}

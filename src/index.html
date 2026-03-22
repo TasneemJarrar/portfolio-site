@@ -1,32 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tasneem Khalil — Portfolio</title>
-    <link rel="stylesheet" href="../dist/main.css" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Nunito:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tasneem Jarrar — Portfolio</title>
+  <link rel="stylesheet" href="../dist/main.css" />
 
-  <body>
-    <!-- Skip to main content (accessibility) -->
-    <a class="skip-main" href="#main">Skip to main content</a>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Nunito:wght@400;500&display=swap"
+    rel="stylesheet" />
+</head>
+<script>
+  const header = document.querySelector('.header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 80) {
+      header.classList.add('header--scrolled');
+    } else {
+      header.classList.remove('header--scrolled');
+    }
+  });
+</script>
 
-    <!-- Header will go here (Part 2) -->
+<body>
+  <a class="skip-main" href="#main">Skip to main content</a>
 
-    <!-- Main content -->
-    <main id="main" tabindex="-1">
-      <!-- Hero / Intro Banner will go here (Part 3) -->
-      <!-- Latest Projects will go here (Part 4) -->
-    </main>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__container">
 
-    <!-- Footer will go here (Part 5) -->
-  </body>
+      <!-- Logo -->
+      <a href="#" class="header__logo" aria-label="TJ home">
+        TJ<span class="header__logo-dot">.</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="header__nav" aria-label="Main navigation">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#resume">Resume</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Burger Menu -->
+      <div class="header__mobile-menu">
+        <input type="checkbox" id="menu-toggle" class="header__menu-toggle" />
+        <label for="menu-toggle" class="header__menu-toggle-label" aria-label="Mobile menu button">
+          <span class="header__menu-bar"></span>
+        </label>
+        <nav class="header__menu-nav" aria-label="Mobile navigation">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#projects">Projects</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#skills">Skills</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#resume">Resume</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main id="main" tabindex="-1">
+  </main>
+
+</body>
+
 </html>

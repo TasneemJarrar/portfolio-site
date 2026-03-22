@@ -1,7 +1,4 @@
-@use '../utils/mixins';
-@use './colors';
-@use './animations';
-@use './states';
-@use '../utils/variables';
+@use './resets';
 @use './tags';
+@use './states';
 @use './buttons';

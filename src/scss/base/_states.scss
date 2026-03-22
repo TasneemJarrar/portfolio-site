@@ -1,0 +1,53 @@
+@use '../utils/variables';
+@use '../utils/mixins';
+
+// Skip to Main 
+.skip-main {
+  @include mixins.visually-hidden;
+
+  &:focus,
+  &:active {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    padding: 1.2rem 2.4rem;
+    background-color: variables.$color-white;
+    color: variables.$color-primary-navy;
+    border: 2px solid variables.$color-primary-navy;
+    border-radius: variables.$radius-md;
+    font-size: 1.6rem;
+    font-weight: variables.$font-weight-medium;
+    z-index: 9999;
+  }
+}
+
+// Visibility Helpers 
+
+// Show only on mobile
+.is--mobile {
+  display: block !important;
+
+  @include mixins.respond-to('md') {
+    display: none !important;
+  }
+}
+
+// Show only on desktop
+.is--desktop {
+  display: none !important;
+
+  @include mixins.respond-to('md') {
+    display: block !important;
+  }
+}
+
+// Required field indicator
+.label--required {
+  color: variables.$color-accent-coral;
+  margin-left: 0.2rem;
+}
