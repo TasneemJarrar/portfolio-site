@@ -1,0 +1,39 @@
+// Colors
+$color-base-cream:    #FDF6EE;
+$color-primary-navy:  #0D1B2E;
+$color-accent-coral:  #FF6B6B;
+$color-subtle-blush:  #FFE8E8;
+$color-slate:         #1B3358;
+$color-white:         #FFFFFF;
+$color-black:         #000000;
+
+// Fonts 
+$font-heading: 'Space Grotesk', sans-serif;
+$font-body:    'Nunito', sans-serif;
+
+// Font Weights 
+$font-weight-regular: 400;
+$font-weight-medium:  500;
+$font-weight-bold:    700;
+
+// Spacing 
+$spacing-xs:  0.4rem;
+$spacing-sm:  0.8rem;
+$spacing-md:  1.6rem;
+$spacing-lg:  3.2rem;
+$spacing-xl:  6.4rem;
+
+// Border Radius 
+$radius-sm:   4px;
+$radius-md:   8px;
+$radius-lg:   16px;
+$radius-full: 50%;
+
+// Breakpoints 
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Transitions 
+$transition-base: all 0.3s ease;

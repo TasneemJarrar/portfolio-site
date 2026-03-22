@@ -1,0 +1,50 @@
+@use './variables';
+
+// Media Queries
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == 'sm' {
+    @media (min-width: variables.$breakpoint-sm) { @content; }
+  } @else if $breakpoint == 'md' {
+    @media (min-width: variables.$breakpoint-md) { @content; }
+  } @else if $breakpoint == 'lg' {
+    @media (min-width: variables.$breakpoint-lg) { @content; }
+  } @else if $breakpoint == 'xl' {
+    @media (min-width: variables.$breakpoint-xl) { @content; }
+  }
+}
+
+// Flexbox Helpers 
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Visually Hidden 
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// Reduced Motion 
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: no-preference) { @content; }
+}
