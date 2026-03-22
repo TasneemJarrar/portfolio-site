@@ -1,0 +1,149 @@
+@use '../utils/variables';
+@use '../utils/mixins';
+
+.hero {
+  background-color: variables.$color-base-cream;
+  min-height: 100vh;
+  padding-top: 10rem;
+  padding-bottom: 6rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  display: flex;
+  align-items: center;
+
+  @include mixins.respond-to('md') {
+    padding-top: 12rem;
+    padding-bottom: 8rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  // Containe
+  &__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+
+    // Side by side on desktop
+    @include mixins.respond-to('lg') {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 6rem;
+    }
+  }
+
+  // Left side text content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    @include mixins.respond-to('lg') {
+      text-align: left;
+      flex: 1;
+    }
+  }
+
+  &__label {
+    font-family: variables.$font-body;
+    font-size: 1.6rem;
+    font-weight: variables.$font-weight-medium;
+    color: variables.$color-accent-coral;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 0 0.8rem 0;
+
+    @include mixins.respond-to('md') {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__name {
+    font-family: variables.$font-heading;
+    font-size: 5.2rem;
+    font-weight: variables.$font-weight-bold;
+    color: variables.$color-primary-navy;
+    line-height: 1.1;
+    margin: 0 0 1.6rem 0;
+
+    @include mixins.respond-to('md') {
+      font-size: 7.2rem;
+    }
+  }
+
+  &__name-dot {
+    color: variables.$color-accent-coral;
+  }
+
+  &__subtitle {
+    font-family: variables.$font-body;
+    font-size: 1.8rem;
+    font-weight: variables.$font-weight-medium;
+    color: variables.$color-slate;
+    margin: 0 0 2.4rem 0;
+
+    @include mixins.respond-to('md') {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__bio {
+    font-size: 1.6rem;
+    color: variables.$color-slate;
+    line-height: 1.8;
+    max-width: 58rem;
+    margin: 0 auto 3.2rem auto;
+
+    @include mixins.respond-to('lg') {
+      margin: 0 0 3.2rem 0;
+      font-size: 1.8rem;
+    }
+  }
+
+  // CTA Buttons
+  &__ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    align-items: center;
+
+    @include mixins.respond-to('sm') {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    @include mixins.respond-to('lg') {
+      justify-content: flex-start;
+    }
+  }
+
+  // Right side image
+  &__image-wrapper {
+    width: 28rem;
+    height: 28rem;
+    border-radius: variables.$radius-full;
+    overflow: hidden;
+    border: 4px solid variables.$color-subtle-blush;
+    flex-shrink: 0;
+
+    @include mixins.respond-to('md') {
+      width: 36rem;
+      height: 36rem;
+    }
+
+    @include mixins.respond-to('lg') {
+      width: 42rem;
+      height: 42rem;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
