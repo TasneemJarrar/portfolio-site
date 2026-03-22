@@ -1,14 +1,13 @@
 {
-    "name": "portfolio-example",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "dependencies": {
-        "sass": "^1.79.3"
-    },
-    "devDependencies": {
-        "less": "^4.2.0"
-    }
+  "name": "tasneem-jarrar-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "sass": "sass src/scss/main.scss dist/main.css",
+    "sass:watch": "sass src/scss/main.scss dist/main.css --watch",
+    "sass:prod": "sass src/scss/main.scss dist/main.css --style=compressed --no-source-map"
+  },
+  "dependencies": {
+    "sass": "^1.79.3"
+  }
 }
