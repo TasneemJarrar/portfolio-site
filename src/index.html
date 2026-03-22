@@ -1,0 +1,131 @@
+<!DOCTYPE html lang="en">
+<html>
+    <head>
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="../dist/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+
+    <body id="body">
+        <a class="skip-main" href="#main">Skip to main content</a>
+        <header>
+            <div class="container">
+                <a href="#" class="header__logo">
+                    <img src="https://placehold.co/100x50" alt="My Portfolio Logo" class="header__logo-image">
+                </a>
+                <nav class="header-nav" aria-label="navigation links">
+                    <ul class="header-nav__menu-items" role="group">
+                        <li class="header-nav__menu-item"><a class="header-nav__link" href="/">Projects</a></li>
+                        <li class="header-nav__menu-item"><a class="header-nav__link" href="/projects">Resume</a></li>
+                        <li class="header-nav__menu-item is--mobile">
+                            <div class="menu" role="menu">
+                                <input type="checkbox" id="menu-toggle" class="menu__toggle">
+                                <label for="menu-toggle" class="menu__toggle-label" role="button" arial-label="mobile menu button">
+                                    <span class="menu__bar"></span>
+                                </label>
+                                <nav class="menu__navigation">
+                                    <ul class="menu__menu-item-list" role="group">
+                                        <li class="menu__menu-item" role="menuitem"><a class="menu__menu-link" href="/">Projects</a></li>
+                                        <li class="menu__menu-item" role="menuitem"><a class="menu__menu-link" href="/projects">Resume</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="banner" class="banner">
+            <img src="../src/img/background.jpg" alt="Banner background image" class="banner__image">
+            <div class="banner__sphere sphere--one" arial-label="Sphere 1 Icon"></div>
+            <div class="banner__sphere sphere--two" aria-label="Sphere 2 Icon"></div>
+            <div class="banner__sphere sphere--three" aria-label="Sphere 3 Icon"></div>
+            <div class="banner__content">
+                <h1>Welcome to My Portfolio</h1>
+                <p>My name is [Your Name], and I am a web developer.</p>
+            </div>
+        </div>
+        <main id="main" tabindex="-1">
+            <section id="latest-projects" class="latest-projects">
+                <div class="container">
+                    <h2 class="latest-projects__headline">Latest Projects</h2>
+                    <div class="project-card">
+                        <a class="project-card__link" aria-label="go to project 1 detail page" href="#">
+                            <img src="https://placehold.co/400" alt="Project 1" class="project-card__image">
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">Project 1</h3>
+                                <p class="project-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a class="project-card__link" aria-label="go to project 2 detail page" href="#">
+                            <img src="https://placehold.co/400" alt="Project 2" class="project-card__image">
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">Project 2</h3>
+                                <p class="project-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a class="project-card__link" aria-label="go to project 3 detail page" href="#">
+                            <img src="https://placehold.co/400" alt="Project 3" class="project-card__image">
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">Project 3</h3>
+                                <p class="project-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="latest-projects__btn-container">
+                        <a class="primary-btn" href="#">See All Projects</a>
+                    </div>
+                </div>
+            </section>
+            <section id="bio">
+                <div class="container">
+                    <div class="bio">
+                        <div class="bio__image-container">
+                            <img src="https://placehold.co/650" class="bio__image" width="650" height="650" alt="Profile Image">
+                        </div>
+                        <div class="bio__content">
+                            <h2 class="bio__headline">About Me</h2>
+                            <p class="bio__description">My name is [Your Name], and I am a web developer. I have been working in the industry for over 10 years. I have experience in HTML, CSS, JavaScript, and PHP. I have worked on a variety of projects, including websites, web applications, and mobile apps. I am passionate about creating clean, user-friendly designs that are both functional and visually appealing.</p>
+                            <div class="bio__content__ctas">
+                                <a class="primary-btn" href="#">Download Resume</a>
+                                <a class="secondary-btn" href="#">View Guthub Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact-us" class="contact-us">
+                <div class="container">
+                    <h2 class="contact-us__headline">Contact Me</h2>
+                    <p class="contact-us__description">If you wish to inquire about a potential job opportunity, fill out this form below and I will get back to you in a timely manner.</p>
+                    <form action="submit" method="post" class="contact-us__form-container">
+                        <label for="name" class="contact-us__label">Name<span class="label--required">*</span></label>
+                        <input class="contact-us__input" type="text" id="name" name="name">
+                        <label for="name" class="contact-us__label">Email<span class="label--required">*</span></label>
+                        <input class="contact-us__input" type="email" id="name" name="name" required>
+                        <label for="phone" class="contact-us__label">Phone Number<span class="label--required">*</span></label>
+                        <input class="contact-us__input" type="tel" id="phone" name="phone" required>
+                        <label for="title" class="contact-us__label" aria-label="title is no more than 50 letters">Title</label>
+                        <input class="contact-us__input" type="text" id="title" name="title" required>
+                        <label for="message" class="contact-us__label">Message <span class="label--required">*</span></label>
+                        <textarea id="message" class="contact-us__text-area" name="message" aria-describedby="message-description" resize="no"></textarea>
+                        <p id="message-description" class="contact-us__message-description">Max message is 250 words</p>
+                        <button type="submit" class="primary-btn contact-us__submit-btn">Submit</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <ul class="footer__content">
+                <li class="footer__content-item">&copy; 2024 My Portfolio</li>
+            </ul>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+@use '../utils/mixins';
+
+.container{
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    display: flex;
+    @include mixins.mediaQuery('md'){
+        padding: 0 2rem;
+    }
+}
