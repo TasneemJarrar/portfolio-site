@@ -1,0 +1,46 @@
+@use '../utils/variables';
+@use '../utils/mixins';
+
+.latest-projects {
+  background-color: variables.$color-base-cream;
+  padding: 6rem 2.4rem;
+
+  @include mixins.respond-to('md') {
+    padding: 10rem 4rem;
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__headline {
+    font-family: variables.$font-heading;
+    font-size: 3.6rem;
+    font-weight: variables.$font-weight-bold;
+    color: variables.$color-primary-navy;
+    text-align: center;
+    margin: 0 0 5rem 0;
+
+    @include mixins.respond-to('md') {
+      font-size: 4.8rem;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+
+    @include mixins.respond-to('md') {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+  }
+}

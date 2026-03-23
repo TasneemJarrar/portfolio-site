@@ -642,4 +642,149 @@ section {
   padding-left: 0.8rem;
 }
 
+.latest-projects {
+  background-color: #FDF6EE;
+  padding: 6rem 2.4rem;
+}
+@media (min-width: 768px) {
+  .latest-projects {
+    padding: 10rem 4rem;
+  }
+}
+.latest-projects__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.latest-projects__headline {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #0D1B2E;
+  text-align: center;
+  margin: 0 0 5rem 0;
+}
+@media (min-width: 768px) {
+  .latest-projects__headline {
+    font-size: 4.8rem;
+  }
+}
+.latest-projects__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.4rem;
+}
+@media (min-width: 768px) {
+  .latest-projects__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.latest-projects__btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.project-card {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+}
+.project-card__image-wrapper {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  flex-shrink: 0;
+}
+.project-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.project-card__content {
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.project-card__tags {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.2rem;
+}
+.project-card__tag {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+}
+.project-card__title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0D1B2E;
+  margin: 0 0 1rem 0;
+}
+.project-card__description {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  color: #1B3358;
+  line-height: 1.7;
+  flex: 1;
+  margin: 0 0 2rem 0;
+}
+@media (min-width: 768px) {
+  .project-card__description {
+    font-size: 1.6rem;
+  }
+}
+.project-card__link {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #FF6B6B;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+.project-card__link:hover {
+  color: #ff3838;
+  letter-spacing: 0.3px;
+}
+.project-card--blue .project-card__image-wrapper {
+  background-color: #E6F1FB;
+}
+.project-card--blue .project-card__tag {
+  background-color: #E6F1FB;
+  color: #0C447C;
+}
+.project-card--red .project-card__image-wrapper {
+  background-color: #FCEBEB;
+}
+.project-card--red .project-card__tag {
+  background-color: #FCEBEB;
+  color: #791F1F;
+}
+.project-card--green .project-card__image-wrapper {
+  background-color: #EAF3DE;
+}
+.project-card--green .project-card__tag {
+  background-color: #EAF3DE;
+  color: #27500A;
+}
+
 /*# sourceMappingURL=main.css.map */
