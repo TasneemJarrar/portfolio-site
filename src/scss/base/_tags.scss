@@ -137,8 +137,8 @@ textarea {
 
 // Sections 
 section {
+  scroll-snap-align: start;
   padding: 6rem 2rem;
-
   @include mixins.respond-to('md') {
     padding: 10rem 4rem;
   }

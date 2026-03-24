@@ -171,3 +171,30 @@
     object-fit: cover;
   }
 }
+
+// Animations 
+@include mixins.reduced-motion {
+  .hero__label {
+    animation: fadeInUp 0.6s ease forwards;
+  }
+  .hero__name {
+    animation: fadeInUp 0.6s ease 0.1s forwards;
+    opacity: 0;
+  }
+  .hero__subtitle {
+    animation: fadeInUp 0.6s ease 0.2s forwards;
+    opacity: 0;
+  }
+  .hero__bio {
+    animation: fadeInUp 0.6s ease 0.3s forwards;
+    opacity: 0;
+  }
+  .hero__ctas {
+    animation: fadeInUp 0.6s ease 0.4s forwards;
+    opacity: 0;
+  }
+  .hero__image-wrapper {
+    animation: fadeInRight 0.8s ease 0.2s forwards;
+    opacity: 0;
+  }
+}
