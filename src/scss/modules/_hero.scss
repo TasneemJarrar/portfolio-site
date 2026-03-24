@@ -108,16 +108,40 @@
   &__ctas {
     display: flex;
     flex-direction: column;
-    gap: 1.6rem;
+    gap: 2rem;
     align-items: center;
 
     @include mixins.respond-to('sm') {
       flex-direction: row;
+      flex-wrap: wrap; // ← add this
       justify-content: center;
     }
 
     @include mixins.respond-to('lg') {
       justify-content: flex-start;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: variables.$radius-full;
+    border: 1.5px solid variables.$color-primary-navy;
+    color: variables.$color-primary-navy;
+    transition: variables.$transition-base;
+
+    &:hover {
+      background-color: variables.$color-primary-navy;
+      color: variables.$color-white;
     }
   }
 
