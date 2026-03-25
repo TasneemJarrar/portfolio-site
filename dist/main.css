@@ -1050,4 +1050,102 @@ section {
   }
 }
 
+.skills {
+  background-color: #FDF6EE;
+  padding: 6rem 2.4rem;
+}
+@media (min-width: 768px) {
+  .skills {
+    padding: 10rem 4rem;
+  }
+}
+.skills__container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.skills__headline {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #0D1B2E;
+  margin: 0 0 1.2rem 0;
+}
+@media (min-width: 768px) {
+  .skills__headline {
+    font-size: 4.8rem;
+  }
+}
+.skills__subheading {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.6rem;
+  color: #1B3358;
+  margin: 0 0 4rem 0;
+  opacity: 0.8;
+}
+.skills__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+}
+.skills__pill {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+@media (min-width: 768px) {
+  .skills__pill {
+    font-size: 1.6rem;
+  }
+}
+.skills__pill:hover {
+  transform: translateY(-4px);
+}
+.skills__logo {
+  width: 2.2rem;
+  height: 2.2rem;
+  flex-shrink: 0;
+}
+.skills__pill--html {
+  background-color: #FFF0E6;
+  color: #7A3000;
+}
+.skills__pill--js {
+  background-color: #FAFAE0;
+  color: #5A4E00;
+}
+.skills__pill--react {
+  background-color: #E6F6FF;
+  color: #004A7A;
+}
+.skills__pill--python {
+  background-color: #EAF3DE;
+  color: #27500A;
+}
+.skills__pill--php {
+  background-color: #EEF0FF;
+  color: #2A2D8A;
+}
+.skills__pill--git {
+  background-color: #FFF0EE;
+  color: #7A1A00;
+}
+.skills__pill--bootstrap {
+  background-color: #F0EEFF;
+  color: #3A007A;
+}
+.skills__pill--scss {
+  background-color: #FCEAF3;
+  color: #7A004A;
+}
+
 /*# sourceMappingURL=main.css.map */

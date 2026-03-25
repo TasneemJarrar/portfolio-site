@@ -1,0 +1,118 @@
+@use '../utils/variables';
+@use '../utils/mixins';
+
+.skills {
+  background-color: variables.$color-base-cream;
+  padding: 6rem 2.4rem;
+
+  @include mixins.respond-to('md') {
+    padding: 10rem 4rem;
+  }
+
+  // Container
+  &__container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  // Heading
+  &__headline {
+    font-family: variables.$font-heading;
+    font-size: 3.6rem;
+    font-weight: variables.$font-weight-bold;
+    color: variables.$color-primary-navy;
+    margin: 0 0 1.2rem 0;
+
+    @include mixins.respond-to('md') {
+      font-size: 4.8rem;
+    }
+  }
+
+  &__subheading {
+    font-family: variables.$font-body;
+    font-size: 1.6rem;
+    color: variables.$color-slate;
+    margin: 0 0 4rem 0;
+    opacity: 0.8;
+  }
+
+  // Grid
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+
+  // Base Pill
+  &__pill {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-family: variables.$font-body;
+    font-size: 1.5rem;
+    font-weight: variables.$font-weight-medium;
+    transition: variables.$transition-base;
+    cursor: default;
+
+    @include mixins.respond-to('md') {
+      font-size: 1.6rem;
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+  }
+
+  // Logo
+  &__logo {
+    width: 2.2rem;
+    height: 2.2rem;
+    flex-shrink: 0;
+  }
+
+  // Color Modifiers
+  &__pill--html {
+    background-color: #FFF0E6;
+    color: #7A3000;
+  }
+
+  &__pill--js {
+    background-color: #FAFAE0;
+    color: #5A4E00;
+  }
+
+  &__pill--react {
+    background-color: #E6F6FF;
+    color: #004A7A;
+  }
+
+  &__pill--python {
+    background-color: #EAF3DE;
+    color: #27500A;
+  }
+
+  &__pill--php {
+    background-color: #EEF0FF;
+    color: #2A2D8A;
+  }
+
+  &__pill--git {
+    background-color: #FFF0EE;
+    color: #7A1A00;
+  }
+
+  &__pill--bootstrap {
+    background-color: #F0EEFF;
+    color: #3A007A;
+  }
+
+  &__pill--scss {
+    background-color: #FCEAF3;
+    color: #7A004A;
+  }
+}
